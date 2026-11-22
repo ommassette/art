@@ -1,0 +1,260 @@
+/* ================= ART DETAIL PAGE ================= */
+.art-page {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+/* 1. Full Image at Top */
+.art-hero {
+  width: 100%;
+  padding: clamp(12px, 2vw, 24px) clamp(20px, 4vw, 56px) clamp(36px, 5vw, 64px);
+}
+
+.art-hero-figure {
+  margin: 0;
+  width: 100%;
+  background: var(--frame);
+  border: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.art-hero-figure img {
+  display: block;
+  width: 100%;
+  max-height: 82svh;
+  object-fit: contain;
+}
+
+/* Edge-to-edge Huge Heading (shared by Painting Title & Artist Name) */
+.edge-heading {
+  margin: 0 0 clamp(32px, 5vw, 64px);
+  padding-left: clamp(20px, 4vw, 56px);
+  padding-right: clamp(20px, 4vw, 56px);
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(4rem, 15vw, 17rem);
+  line-height: 0.84;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  word-break: break-word;
+}
+
+/* 2. Painting Section */
+.art-detail {
+  padding-top: clamp(16px, 3vh, 32px);
+  padding-bottom: clamp(64px, 10vh, 130px);
+}
+
+/* 3. Artist Section */
+.artist-profile {
+  border-top: 1px solid #e6e6e6;
+  padding-top: clamp(64px, 10vh, 130px);
+  padding-bottom: clamp(64px, 10vh, 130px);
+}
+
+/* Two-Column Grid inside Painting & Artist Sections */
+.art-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(36px, 6vw, 96px);
+  padding-inline: clamp(20px, 4vw, 56px);
+  align-items: start;
+}
+
+/* Left Column: Clean Key/Value Specification Rows */
+.meta-list {
+  margin: 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e6e6e6;
+  align-items: baseline;
+}
+
+.meta-row dt {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a8a8a;
+}
+
+.meta-row dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.meta-row dd a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid #d4d4d4;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.meta-row dd a:hover {
+  color: var(--paint);
+  border-bottom-color: var(--paint);
+}
+
+.meta-row-price dd {
+  font-weight: 700;
+  color: var(--paint);
+}
+
+.artist-contact-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.artist-contact-cell a {
+  width: fit-content;
+}
+
+.artist-contact-cell span {
+  font-size: 13px;
+  color: #6b6b6b;
+}
+
+/* Right Column: Story, Bio & Quote */
+.art-story p {
+  margin: 0 0 20px;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.72;
+  color: #1f1f1f;
+  max-width: 62ch;
+}
+
+.art-story p:last-child {
+  margin-bottom: 0;
+}
+
+.artist-bio-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+.artist-quote {
+  margin: 0;
+  padding: 4px 0 4px 22px;
+  border-left: 2px solid var(--paint);
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 52ch;
+}
+
+/* 4. Other Works Section */
+.other-works {
+  border-top: 1px solid #e6e6e6;
+  padding: clamp(64px, 10vh, 130px) clamp(20px, 4vw, 56px) clamp(80px, 12vh, 150px);
+}
+
+.other-works-heading {
+  margin: 0 0 clamp(36px, 5vw, 64px);
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.other-works-grid {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.other-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.other-card-figure {
+  margin: 0 0 14px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--frame);
+  border: 1px solid #eaeaea;
+  transition: border-color .35s var(--ease);
+}
+
+.other-card:hover .other-card-figure {
+  border-color: var(--ink);
+}
+
+.other-card-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s var(--ease);
+}
+
+.other-card:hover .other-card-figure img {
+  transform: scale(1.04);
+}
+
+.other-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.other-card-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.other-card-price {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7d7d7d;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .art-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .meta-row {
+    grid-template-columns: 120px minmax(0, 1fr);
+  }
+}
+
+.art-page {
+  background: #ffffff;
+  color: var(--ink);
+  overflow-x: clip;
+}
+
+@media (max-width: 480px) {
+  .meta-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

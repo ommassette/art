@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Untitled Study — Galerie.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="art.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">Galerie<span class="dot">.</span></a>
+
+    <nav class="nav-links">
+      <a href="index.html#exhibition">Exhibitions</a>
+      <a href="index.html#artists">Artists</a>
+      <a href="contact.html">Visit</a>
+    </nav>
+
+    <a class="cta" href="contact.html">Book a visit</a>
+  </header>
+
+  <main class="art-page">
+
+    <!-- ================= 1. FULL IMAGE ================= -->
+    <section class="art-hero" aria-label="Artwork showcase">
+      <figure class="art-hero-figure">
+        <img
+          src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=1600&auto=format&fit=crop&q=85&ixlib=rb-4.1.0"
+          alt="Oil on canvas, abstract study"
+        />
+      </figure>
+    </section>
+
+    <!-- ================= 2. PAINTING TITLE & DETAILS ================= -->
+    <section class="art-detail" aria-labelledby="artTitle">
+      <h1 class="edge-heading" id="artTitle">UNTITLED STUDY</h1>
+
+      <div class="art-two-col">
+        <dl class="meta-list">
+          <div class="meta-row">
+            <dt>Name</dt>
+            <dd>Untitled Study</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Artist</dt>
+            <dd><a href="#artistProfile">Marta Alvi</a></dd>
+          </div>
+          <div class="meta-row">
+            <dt>Date</dt>
+            <dd>2025</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Type</dt>
+            <dd>Oil &amp; Raw Pigment on Linen</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Size</dt>
+            <dd>140 &times; 175 cm (55.1 &times; 68.9 in)</dd>
+          </div>
+          <div class="meta-row meta-row-price">
+            <dt>Price</dt>
+            <dd>$6,400</dd>
+          </div>
+        </dl>
+
+        <div class="art-story">
+          <p>
+            Painted across three consecutive winters in a north-facing studio, Untitled Study explores the quiet friction between heavy mineral impasto and exposed raw linen. Layers of burnt umber and titanium white were scraped back with a steel palette knife before curing, leaving geological ridges that catch directional gallery light differently throughout the day.
+          </p>
+          <p>
+            Rather than resolving into a fixed focal point, the composition holds its weight along the lower margin, inviting the viewer to step closer and read the physical speed of each brushstroke.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. ARTIST SECTION ================= -->
+    <section class="artist-profile" id="artistProfile" aria-labelledby="artistHeading">
+      <h2 class="edge-heading" id="artistHeading">MARTA ALVI</h2>
+
+      <div class="art-two-col">
+        <dl class="meta-list">
+          <div class="meta-row">
+            <dt>Artist</dt>
+            <dd>Marta Alvi</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Born</dt>
+            <dd>1988</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Nationality</dt>
+            <dd>Italian</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Years Active</dt>
+            <dd>2011 &ndash; Present</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Specialisation</dt>
+            <dd>Abstract Oil Painting &amp; Material Abstraction</dd>
+          </div>
+          <div class="meta-row">
+            <dt>Contact</dt>
+            <dd class="artist-contact-cell">
+              <a href="mailto:studio@martaalvi.example">studio@martaalvi.example</a>
+              <span>+39 02 5550 1948 &middot; @martaalvi.studio</span>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="artist-bio-col">
+          <div class="art-story">
+            <p>
+              Marta Alvi (b. 1988, Turin) investigates surface memory, architectural decay, and tactile restraint. Working primarily with hand-ground earth pigments, beeswax, and unprimed Belgian linen, her canvases treat paint as a sculptural sediment rather than an illusionistic window.
+            </p>
+            <p>
+              Her works have been exhibited across Milan, Zurich, and Nairobi, and sit in private collections throughout Europe and East Africa.
+            </p>
+          </div>
+
+          <blockquote class="artist-quote">
+            &ldquo;I am not trying to paint an image of silence—I want the surface itself to absorb noise the way wet plaster does.&rdquo;
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. OTHER WORKS ================= -->
+    <section class="other-works" aria-labelledby="otherWorksHeading">
+      <h2 class="other-works-heading" id="otherWorksHeading">OTHER WORKS</h2>
+
+      <div class="other-works-grid">
+        <article class="other-card">
+          <a href="art.html">
+            <figure class="other-card-figure">
+              <img
+                src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.1.0"
+                alt="Archive Fragment IV"
+                loading="lazy"
+              />
+            </figure>
+            <div class="other-card-meta">
+              <h3 class="other-card-title">Archive Fragment IV</h3>
+              <p class="other-card-price">$4,800</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="other-card">
+          <a href="art.html">
+            <figure class="other-card-figure">
+              <img
+                src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0"
+                alt="Warm Interval"
+                loading="lazy"
+              />
+            </figure>
+            <div class="other-card-meta">
+              <h3 class="other-card-title">Warm Interval</h3>
+              <p class="other-card-price">$7,200</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="other-card">
+          <a href="art.html">
+            <figure class="other-card-figure">
+              <img
+                src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0"
+                alt="Second Light"
+                loading="lazy"
+              />
+            </figure>
+            <div class="other-card-meta">
+              <h3 class="other-card-title">Second Light</h3>
+              <p class="other-card-price">$5,500</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="visit">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-heading">VISIT US</h2>
+
+          <div class="footer-details">
+            <div class="footer-block">
+              <span class="footer-label">Location</span>
+              <p class="footer-text">48 Gallery Lane, Suite 2B<br />Nairobi, Kenya</p>
+            </div>
+
+            <div class="footer-block">
+              <span class="footer-label">Contact</span>
+              <p class="footer-text">
+                <a href="mailto:hello@galerie.example">hello@galerie.example</a><br />
+                <a href="tel:+254700000000">+254 700 000 000</a>
+              </p>
+            </div>
+
+            <div class="footer-block">
+              <span class="footer-label">Hours</span>
+              <p class="footer-text">Tue &ndash; Sun, 10:00 &ndash; 18:00<br />Closed Mondays</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links-group">
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="index.html#exhibition">Exhibitions</a>
+              <a href="index.html#artists">Artists</a>
+              <a href="contact.html">Book a visit</a>
+              <a href="/privacy-policy/">Privacy Policy</a>
+            </nav>
+
+            <div class="footer-socials" aria-label="Social media">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="X">
+                <i class="bi bi-twitter-x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <i class="bi bi-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <p class="footer-wordmark" aria-hidden="true">ART GALLERY</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Galerie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

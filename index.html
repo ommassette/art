@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art Gallery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section class="hero">
+
+    <header class="nav">
+      <a class="logo" href="#">Galerie<span class="dot">.</span></a>
+
+      <nav class="nav-links">
+        <a href="#exhibition">Exhibitions</a>
+        <a href="#artists">Artists</a>
+        <a href="contact.html">Visit</a>
+      </nav>
+
+      <a class="cta" href="contact.html">Book a visit</a>
+    </header>
+
+    <div class="main">
+      <h1 class="hero-title">ART GALLERY</h1>
+
+      <div class="frame">
+        <div class="flower">
+          <img src="flower.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= EXHIBITION: FREEFORM FIELD ================= -->
+  <section class="exhibition" id="exhibition" aria-label="Interactive exhibition field">
+    <div class="field-hud">
+      <span class="field-hint">Drag to explore &middot; Scroll to zoom</span>
+      <div class="field-controls">
+        <button type="button" class="field-btn" id="zoomOutBtn" aria-label="Zoom out">&minus;</button>
+        <span class="field-zoom-label" id="zoomLabel">100%</span>
+        <button type="button" class="field-btn" id="zoomInBtn" aria-label="Zoom in">+</button>
+        <button type="button" class="field-btn field-reset" id="resetFieldBtn">Center</button>
+      </div>
+    </div>
+
+    <div class="field-viewport" id="fieldViewport">
+      <div class="field-stage" id="fieldStage">
+
+        <article class="piece" data-x="220" data-y="180" data-w="300">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 4 / 5;">
+              <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Oil on canvas, abstract study" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Untitled Study</h3>
+            <p class="piece-artist">Marta Alvi</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="1040" data-y="420" data-w="260">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 3 / 4;">
+              <img src="https://images.unsplash.com/photo-1765814142702-52474219184e?q=80&w=760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Mixed media portrait" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Quiet Hours</h3>
+            <p class="piece-artist">Elena Fournier</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="1860" data-y="150" data-w="360">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 5 / 4;">
+              <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?q=80&w=1063&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Abstract composition in warm tones" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Warm Interval</h3>
+            <p class="piece-artist">Kofi Mensah</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="460" data-y="1080" data-w="320">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 1 / 1;">
+              <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=1019&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Textured brushwork on canvas" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Second Light</h3>
+            <p class="piece-artist">Ines Rovira</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="1420" data-y="1240" data-w="280">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 3 / 4;">
+              <img src="https://images.unsplash.com/photo-1688588426729-dc4f7bdb8fbe?q=80&w=1109&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Featured gallery artwork" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Stillness No. 3</h3>
+            <p class="piece-artist">Dario Lang</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="2440" data-y="860" data-w="350">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 4 / 3;">
+              <img src="https://images.unsplash.com/photo-1765813911862-deaa350a57c3?q=80&w=1056&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Colour field painting" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Low Horizon</h3>
+            <p class="piece-artist">Amara Okafor</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="2680" data-y="240" data-w="270">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 4 / 5;">
+              <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Archival study II" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Archive Fragment IV</h3>
+            <p class="piece-artist">Marta Alvi</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="880" data-y="1820" data-w="340">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 16 / 11;">
+              <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?q=80&w=1063&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Ochre horizon study" draggable="false" />
+            </figure>
+            <h3 class="piece-title">Ochre Study</h3>
+            <p class="piece-artist">Kofi Mensah</p>
+          </a>
+        </article>
+
+        <article class="piece" data-x="2120" data-y="1740" data-w="290">
+          <a href="art.html">
+            <figure class="piece-figure" style="aspect-ratio: 3 / 4;">
+              <img src="https://images.unsplash.com/photo-1765814142702-52474219184e?q=80&w=760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="Monochrome portrait study" draggable="false" />
+            </figure>
+            <h3 class="piece-title">After Noon</h3>
+            <p class="piece-artist">Elena Fournier</p>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARTISTS ================= -->
+  <section class="artists" id="artists" aria-label="Exhibition artists">
+    <div class="artists-grid">
+
+      <div class="artist-works" id="artistWorks" aria-live="polite">
+        <p class="artist-empty">Select an artist to view their works.</p>
+      </div>
+
+      <ul class="artist-list" role="tablist">
+        <li>
+          <button type="button" class="artist-name-btn" data-artist="marta-alvi">
+            Marta Alvi
+          </button>
+        </li>
+        <li>
+          <button type="button" class="artist-name-btn" data-artist="elena-fournier">
+            Elena Fournier
+          </button>
+        </li>
+        <li>
+          <button type="button" class="artist-name-btn" data-artist="kofi-mensah">
+            Kofi Mensah
+          </button>
+        </li>
+        <li>
+          <button type="button" class="artist-name-btn" data-artist="ines-rovira">
+            Ines Rovira
+          </button>
+        </li>
+        <li>
+          <button type="button" class="artist-name-btn" data-artist="dario-lang">
+            Dario Lang
+          </button>
+        </li>
+        <li>
+          <button type="button" class="artist-name-btn" data-artist="amara-okafor">
+            Amara Okafor
+          </button>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="visit">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-heading">VISIT US</h2>
+
+          <div class="footer-details">
+            <div class="footer-block">
+              <span class="footer-label">Location</span>
+              <p class="footer-text">48 Gallery Lane, Suite 2B<br />Nairobi, Kenya</p>
+            </div>
+
+            <div class="footer-block">
+              <span class="footer-label">Contact</span>
+              <p class="footer-text">
+                <a href="mailto:hello@galerie.example">hello@galerie.example</a><br />
+                <a href="tel:+254700000000">+254 700 000 000</a>
+              </p>
+            </div>
+
+            <div class="footer-block">
+              <span class="footer-label">Hours</span>
+              <p class="footer-text">Tue &ndash; Sun, 10:00 &ndash; 18:00<br />Closed Mondays</p>
+            </div>
+          </div>
+        </div>
+
+   <div class="footer-right">
+          <div class="footer-links-group">
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="#exhibition">Exhibitions</a>
+              <a href="#artists">Artists</a>
+              <a href="contact.html">Book a visit</a>
+              <a href="/privacy-policy/">Privacy Policy</a>
+            </nav>
+
+            <div class="footer-socials" aria-label="Social media">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="X">
+                <i class="bi bi-twitter-x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <i class="bi bi-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <p class="footer-wordmark" aria-hidden="true">ART GALLERY</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Galerie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <script src="field.js"></script>
+  <script src="artists.js"></script>
+</body>
+</html>

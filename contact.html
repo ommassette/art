@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact &amp; Book a Visit — Galerie.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body class="contact-page">
+  <header class="nav">
+    <a class="logo" href="index.html">Galerie<span class="dot">.</span></a>
+
+    <nav class="nav-links">
+      <a href="index.html#exhibition">Exhibitions</a>
+      <a href="index.html#artists">Artists</a>
+      <a href="contact.html">Visit</a>
+    </nav>
+
+    <a class="cta" href="#bookingForm">Book a visit</a>
+  </header>
+
+  <main class="contact-main">
+    <h1 class="edge-heading">GET IN TOUCH</h1>
+
+    <!-- ================= 1. CONTACT FORM ================= -->
+    <section class="form-band" aria-labelledby="msgHeading">
+      <div class="form-band-inner">
+        <div class="band-title-col">
+          <h2 class="band-title" id="msgHeading">MESSAGE</h2>
+        </div>
+
+        <form class="gallery-form" id="contactForm" novalidate>
+          <input type="text" name="name" placeholder="Name" aria-label="Name" required />
+          <input type="email" name="email" placeholder="Email" aria-label="Email" required />
+          <textarea name="message" rows="2" placeholder="Message" aria-label="Message" required></textarea>
+
+          <button type="submit" class="submit-btn">Send &rarr;</button>
+          <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= 2. BOOKING FORM ================= -->
+    <section class="form-band" id="bookingForm" aria-labelledby="bookHeading">
+      <div class="form-band-inner">
+        <div class="band-title-col">
+          <h2 class="band-title" id="bookHeading">BOOK A VISIT</h2>
+        </div>
+
+        <form class="gallery-form" id="visitBookingForm" novalidate>
+          <input type="text" name="visitor_name" placeholder="Name" aria-label="Name" required />
+          <input type="email" name="visitor_email" placeholder="Email" aria-label="Email" required />
+
+          <div class="field-split">
+            <input type="date" name="visit_date" aria-label="Date" required />
+            <select name="visit_time" aria-label="Time">
+              <option value="10:00">10:00</option>
+              <option value="12:00">12:00</option>
+              <option value="14:30">14:30</option>
+              <option value="16:30">16:30</option>
+            </select>
+            <select name="guests" aria-label="Guests">
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn submit-btn-accent">Book &rarr;</button>
+          <p class="form-status" id="bookingStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="visit">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-heading">VISIT US</h2>
+
+          <div class="footer-details">
+            <div class="footer-block">
+              <span class="footer-label">Location</span>
+              <p class="footer-text">48 Gallery Lane, Suite 2B<br />Nairobi, Kenya</p>
+            </div>
+
+            <div class="footer-block">
+              <span class="footer-label">Contact</span>
+              <p class="footer-text">
+                <a href="mailto:hello@galerie.example">hello@galerie.example</a><br />
+                <a href="tel:+254700000000">+254 700 000 000</a>
+              </p>
+            </div>
+
+            <div class="footer-block">
+              <span class="footer-label">Hours</span>
+              <p class="footer-text">Tue &ndash; Sun, 10:00 &ndash; 18:00<br />Closed Mondays</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links-group">
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <a href="index.html#exhibition">Exhibitions</a>
+              <a href="index.html#artists">Artists</a>
+              <a href="contact.html">Book a visit</a>
+              <a href="/privacy-policy/">Privacy Policy</a>
+            </nav>
+
+            <div class="footer-socials" aria-label="Social media">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="X">
+                <i class="bi bi-twitter-x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <i class="bi bi-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <p class="footer-wordmark" aria-hidden="true">ART GALLERY</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Galerie. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const bindForm = (formId, statusId, msg) => {
+        const form = document.getElementById(formId);
+        const status = document.getElementById(statusId);
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            status.textContent = 'Complete all fields.';
+            status.classList.add('is-error');
+            return;
+          }
+          status.classList.remove('is-error');
+          status.textContent = msg;
+          form.reset();
+        });
+      };
+
+      bindForm('contactForm', 'contactStatus', 'Sent.');
+      bindForm('visitBookingForm', 'bookingStatus', 'Booked.');
+    })();
+  </script>
+</body>
+</html>
