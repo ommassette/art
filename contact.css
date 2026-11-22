@@ -198,3 +198,31 @@
     order: 2;
   }
 }
+/* Mirror the second band: form on left, heading on right */
+#submitArt .form-band-inner {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+
+#submitArt .band-title-col {
+  order: 2;
+  text-align: right;
+}
+
+#submitArt .gallery-form {
+  order: 1;
+}
+
+@media (max-width: 860px) {
+  #submitArt .form-band-inner {
+    grid-template-columns: 1fr;
+  }
+
+  #submitArt .band-title-col {
+    order: 1;
+    text-align: left;
+  }
+
+  #submitArt .gallery-form {
+    order: 2;
+  }
+}

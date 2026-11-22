@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact &amp; Book a Visit — Galerie.</title>
+  <title>Contact — Galerie.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,13 +30,13 @@
       <a href="contact.html">Visit</a>
     </nav>
 
-    <a class="cta" href="#bookingForm">Book a visit</a>
+    <a class="cta" href="#submitArt">Submit art</a>
   </header>
 
   <main class="contact-main">
     <h1 class="edge-heading">GET IN TOUCH</h1>
 
-    <!-- ================= 1. CONTACT FORM ================= -->
+    <!-- ================= 1. MESSAGE FORM ================= -->
     <section class="form-band" aria-labelledby="msgHeading">
       <div class="form-band-inner">
         <div class="band-title-col">
@@ -54,35 +54,21 @@
       </div>
     </section>
 
-    <!-- ================= 2. BOOKING FORM ================= -->
-    <section class="form-band" id="bookingForm" aria-labelledby="bookHeading">
+    <!-- ================= 2. SUBMIT ART FOR SHOWCASE ================= -->
+    <section class="form-band" id="submitArt" aria-labelledby="showcaseHeading">
       <div class="form-band-inner">
         <div class="band-title-col">
-          <h2 class="band-title" id="bookHeading">BOOK A VISIT</h2>
+          <h2 class="band-title" id="showcaseHeading">SUBMIT WORK</h2>
         </div>
 
-        <form class="gallery-form" id="visitBookingForm" novalidate>
-          <input type="text" name="visitor_name" placeholder="Name" aria-label="Name" required />
-          <input type="email" name="visitor_email" placeholder="Email" aria-label="Email" required />
+        <form class="gallery-form" id="showcaseForm" novalidate>
+          <input type="text" name="artist_name" placeholder="Artist Name" aria-label="Artist Name" required />
+          <input type="email" name="artist_email" placeholder="Email" aria-label="Email" required />
+          <input type="url" name="portfolio_url" placeholder="Portfolio or Instagram Link" aria-label="Portfolio or Instagram Link" required />
+          <textarea name="statement" rows="2" placeholder="Brief note on your work" aria-label="Brief note on your work" required></textarea>
 
-          <div class="field-split">
-            <input type="date" name="visit_date" aria-label="Date" required />
-            <select name="visit_time" aria-label="Time">
-              <option value="10:00">10:00</option>
-              <option value="12:00">12:00</option>
-              <option value="14:30">14:30</option>
-              <option value="16:30">16:30</option>
-            </select>
-            <select name="guests" aria-label="Guests">
-              <option value="1">1 Guest</option>
-              <option value="2">2 Guests</option>
-              <option value="3">3 Guests</option>
-              <option value="4">4 Guests</option>
-            </select>
-          </div>
-
-          <button type="submit" class="submit-btn submit-btn-accent">Book &rarr;</button>
-          <p class="form-status" id="bookingStatus" role="status" aria-live="polite"></p>
+          <button type="submit" class="submit-btn submit-btn-accent">Submit &rarr;</button>
+          <p class="form-status" id="showcaseStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -120,7 +106,7 @@
             <nav class="footer-nav" aria-label="Footer navigation">
               <a href="index.html#exhibition">Exhibitions</a>
               <a href="index.html#artists">Artists</a>
-              <a href="contact.html">Book a visit</a>
+              <a href="contact.html">Contact</a>
               <a href="/privacy-policy/">Privacy Policy</a>
             </nav>
 
@@ -146,6 +132,7 @@
       </div>
     </div>
   </footer>
+  <script src="paint-trail.js" defer></script>
 
   <script>
     (() => {
@@ -166,7 +153,7 @@
       };
 
       bindForm('contactForm', 'contactStatus', 'Sent.');
-      bindForm('visitBookingForm', 'bookingStatus', 'Booked.');
+      bindForm('showcaseForm', 'showcaseStatus', 'Submitted.');
     })();
   </script>
 </body>
